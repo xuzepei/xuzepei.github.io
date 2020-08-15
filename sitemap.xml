@@ -1,32 +1,73 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://97.64.106.176/</loc>
-    <lastmod>2019-06-22T18:02:26+08:00</lastmod>
-    <priority>0</priority>
+    <loc>https://xuzepei.github.io/about/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://97.64.106.176/posts/</loc>
-    <lastmod>2019-06-22T18:02:26+08:00</lastmod>
-    <priority>0</priority>
+    <loc>https://xuzepei.github.io/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://97.64.106.176/posts/test/</loc>
-    <lastmod>2019-06-22T18:02:26+08:00</lastmod>
+    <loc>https://xuzepei.github.io/categories/</loc>
+    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://97.64.106.176/categories/</loc>
-    <priority>0</priority>
+    <loc>https://xuzepei.github.io/categories/Golang/</loc>
+    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://97.64.106.176/tags/</loc>
-    <priority>0</priority>
+    <loc>https://xuzepei.github.io/tags/golang/</loc>
+    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xuzepei.github.io/2019/12/18/golang-gin-query-parameters-array-map.html</loc>
+    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xuzepei.github.io/post/</loc>
+    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xuzepei.github.io/tags/</loc>
+    <lastmod>2019-12-18T21:55:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xuzepei.github.io/post/2019-12-13-golang-gin-parameters-in-path/</loc>
+    <lastmod>2019-12-13T21:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xuzepei.github.io/post/2019-12-15-golang-gin-query-parameters-source-code-analysis/</loc>
+    <lastmod>2019-12-13T21:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xuzepei.github.io/categories/Lua/</loc>
+    <lastmod>2019-12-13T21:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xuzepei.github.io/tags/Lua/</loc>
+    <lastmod>2019-12-13T21:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xuzepei.github.io/archives/</loc>
+  </url>
+  
+  <url>
+    <loc>https://xuzepei.github.io/search/</loc>
   </url>
   
 </urlset>

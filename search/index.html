@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Archives | Whale Done Blog</title>
-    <meta property="og:title" content="Archives - Whale Done Blog">
+    <title>Search | Whale Done Blog</title>
+    <meta property="og:title" content="Search - Whale Done Blog">
     <meta property="og:type" content="article">
         
         
     <meta name="Keywords" content="Swift,Objective-C,Jave,Lua,Python,Xcode,Unity,Game,iOS,Android,Web,Blog,Vlog">
-    <meta name="description" content="A Mobile App Developer">
+    <meta name="description" content="Search Page">
         
     <meta name="author" content="Xu Zepei">
-    <meta property="og:url" content="https://xuzepei.github.io/archives/">
+    <meta property="og:url" content="https://xuzepei.github.io/search/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -49,7 +49,7 @@
                 <nav id="nav-menu" class="clearfix">
                     <a class="" href="https://xuzepei.github.io">Home</a>
                     
-                    <a class="current" href="https://xuzepei.github.io/archives/" title="Archives">Archives</a>
+                    <a  href="https://xuzepei.github.io/archives/" title="Archives">Archives</a>
                     
                     <a  href="https://xuzepei.github.io/about/" title="About">About</a>
                     
@@ -65,30 +65,72 @@
 
                 <div class="col-8" id="main">
                     
-<div class="post-archive">
-    
-    <h2>2019</h2>
-    <ul class="listing">
-        
-        <li>
-            <span class="date">2019/12/18</span>
-            <a href="https://xuzepei.github.io/2019/12/18/golang-gin-query-parameters-array-map.html" title="Golang Gin 实战（五）| 接收数组和 Map">Golang Gin 实战（五）| 接收数组和 Map</a>
-        </li>
-        
-        <li>
-            <span class="date">2019/12/13</span>
-            <a href="https://xuzepei.github.io/post/2019-12-15-golang-gin-query-parameters-source-code-analysis/" title="Golang Gin 实战（三）| 路由参数">Golang Gin 实战（三）| 路由参数</a>
-        </li>
-        
-        <li>
-            <span class="date">2019/12/13</span>
-            <a href="https://xuzepei.github.io/post/2019-12-13-golang-gin-parameters-in-path/" title="Golang Gin 实战（三）| 路由参数">Golang Gin 实战（三）| 路由参数</a>
-        </li>
-        
-    </ul>
-    
+<div class="res-cons">
+    <h3 class="archive-title">
+        搜索
+        <span class="keyword">哈哈</span>
+        的结果
+    </h3>
+
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="Link">Title</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年12月01日
+        </date>
+        <div class="post-content">
+            概要……
+            <p class="readmore"><a href="Link">Read more</a></p>
+        </div>
+    </article>
 
 </div>
+
+<script type="text/javascript">
+
+    var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+    };
+
+    $(document).ready(function () {
+        var q = getUrlParameter("q");
+        $("span.keyword").text(q);
+        $("article.post").remove();
+        $.ajax({
+            url: 'https:\/\/xuzepei.github.io\/index.xml',
+            dataType: "xml",
+            success: function (data) {
+                $(data).find("item").each(function () {
+                    var item = $(this);
+                    var title = item.find("title").text();
+                    if (title.toLowerCase().indexOf(q.toLowerCase()) >= 0) {
+                        var url = item.find("link").text();
+                        var searchItem = `<article class="post"><header><h1 class="post-title"><a href="` + url + `">` + title + `</a></h1></header>`;
+                        var pubDate = new Date(item.find("pubDate").text())
+                        searchItem += `<date class="post-meta meta-date">` + pubDate.getFullYear() + `-` + (pubDate.getMonth() + 1) + `-` + pubDate.getDate() + `</date>`;
+                        searchItem += `<div class="post-content">` + item.find("description").text() + `……<p class="readmore"><a href="` + url + `">Read more</a></p></div></article>`;
+
+                        $("div.res-cons").append(searchItem);
+                    }
+                });
+            }
+        });
+    });
+</script>
 
                     <footer id="footer">
     <div>
